@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style/checkout.css">
+</head>
+<body class="">
+    <div class="mission">
+        <div class="container">
+            <h2>Join Us in Making a Difference!</h2>
+            <p>We're on a mission to Acheiving Zero Hunger . Your purchase can make a big impact.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <img src="./Images/cart.jpg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+         
+            <div class="item" data-id="1" data-name="MUG" data-price="5">
+                <img src="./Images/product1.jpg" alt="Product 1">
+                <div class="title">MUG</div>
+                <div class="description">A sturdy ceramic mug, perfect for enjoying your favorite hot/cool beverages</div>
+                <div class="price">$5</div>
+                <button onclick="addToCart(1)">Add To Cart</button>
+            </div>
+            
+            <div class="item" data-id="2" data-name="T-SHIRT" data-price="14">
+                <img src="./Images/product2.jpeg" alt="Product 2">
+                <div class="title">FREE SIZE T-SHIRT</div>
+                <div class="description">A comfortable and versatile free-size t-shirt suitable for everyday wear</div>
+                <div class="price">$14</div>
+               
+                <button onclick="addToCart(2)">Add To Cart</button>
+            </div>
+
+            <div class="item" data-id="3" data-name="CLOTH BAG" data-price="3">
+                <img src="./Images/product3.jpg" alt="Product 2">
+                <div class="title">CLOTH BAG</div>
+                <div class="description">A reusable cloth bag, ideal for shopping trips and reducing plastic waste</div>
+                <div class="price">$3</div>
+                <button onclick="addToCart(3)">Add To Cart</button>
+            </div>
+            <div class="item" data-id="4" data-name="BOTTLE" data-price="9">
+                <img src="./Images/product4.jpg" alt="Product 2">
+                <div class="title">BOTTLE</div>
+                <div class="description"> A durable and eco-friendly water bottle, ideal for staying hydrated on the go</div>
+                <div class="price">$9</div>
+                <button onclick="addToCart(4)">Add To Cart</button>
+            </div>
+
+            <div class="item" data-id="5" data-name="NOTE BOOK" data-price="7">
+                <img src="./Images/product5.jpg" alt="Product 5">
+                <div class="title">NOTE BOOK</div>
+                <div class="description">A compact notebook, perfect for jotting down thoughts, ideas, and reminders</div>
+                <div class="price">$6</div>
+                <button onclick="addToCart(5)">Add To Cart</button>
+            </div>
+
+            <div class="item" data-id="6" data-name="WORLD MAP" data-price="25">
+                <img src="./Images/product6.jpg" alt="Product 6">
+                <div class="title">WORLD MAP FRAME </div>
+                <div class="description"> A captivating world map framed elegantly to adorn your walls and inspire wanderlust.</div>
+                <div class="price">$25</div>
+                <button onclick="addToCart(6)">Add To Cart</button>
+            </div>
+           
+        </div>
+    </div>
+    <div class="cart">
+        <h1>CART</h1>
+        <ul class="listCart">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <script src="./Script/checkout.js"></script>
+    
+</body>
+</html>

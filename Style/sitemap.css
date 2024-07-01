@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(2, 16, 46);
+}
+
+.rectangle rect:hover{
+    fill:aqua;
+}
+
+text:hover{
+    cursor:default;
+
+}

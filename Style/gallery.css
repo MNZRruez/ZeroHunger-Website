@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background: #007bff;
+}
+
+
+body{
+  background-color: rgb(69, 69, 69);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topic {
+  border-radius: 20px;
+  padding: 80px 10px;
+  margin-bottom: 50px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center; /* Center text */
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 0 0 12px rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 60px;
+  animation: slideDown 2s ease;
+   /* Adding slide-down animation */
+}
+
+.container {
+  text-align: center; /* Center text within container */
+}
+
+
+
+.color-button {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.color-button button {
+  display: block;
+  width: 25px; /* Fixed width for the buttons */
+  height: 25px; /* Fixed height for the buttons */
+  padding: 0; /* Remove padding */
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid white; /* Remove border */
+  border-radius: 50%; /* Make the buttons circular */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.color-button button:hover {
+  width: 35px; /* Increase width on hover */
+  height: 35px; /* Increase height on hover */
+}
+
+
+/* Button colors */
+.color1 {
+  background-color: rgb(73, 158, 255);
+}
+
+.color2 {
+  background-color: rgb(255, 255, 255);
+}
+
+.color3 {
+  background-color: rgb(255, 63, 63);
+}
+
+.color4 {
+  background-color: #6b6b6b;
+}
+
+.font-button {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease; /* Adding transition effect */
+}
+
+.font1, .font2, .font3, .font4 {
+  cursor: pointer;
+  text-align: center;
+  padding: 5px; /* Adjust padding */
+  background-color: #ffffff5f;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.689);
+  transition: transform 0.3s ease; /* Add transition effect */
+  animation: slideDown 3s ease;
+}
+
+
+
+
+.font1:hover, .font2:hover, .font3:hover, .font4:hover {
+  background-color: rgba(255, 255, 255, 0.717);
+  transform: scale(0.85); /* Scale the button on hover */
+}
+
+
+
+
+.container{
+  max-width: 1100px;
+}
+
+.page-name{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Add gap between each image */
+}
+
+.gallery .image {
+  padding: 10px; /* Adjust padding */
+  width: calc(33.33% - 20px); /* Calculate width with gap */
+  margin-bottom: 20px; /* Add margin bottom to create space between rows */
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  animation: zoomIn 3s ease; /* Fade-in animation */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5); /* Start with smaller size */
+  }
+  to {
+    transform: scale(1); /* End with original size */
+  }
+}
+
+.gallery .image span {
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  overflow: hidden;
+
+}
+
+
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+
+}
+
+.gallery .image:hover img{
+  transform: scale(1.1);
+  
+}
+
+
+.preview-box{
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 1000px;
+  max-height: 480px;
+  height: 100%;
+  width: 80%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 10px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  
+}
+
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+  
+}
+
+.preview-box .details{
+  display: flex;
+  align-items: center;
+  padding: 12px 15px 12px 10px;
+  justify-content: space-between;
+  
+}
+
+.preview-box .details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.details .title p{
+  margin: 1px 6px;
+}
+
+.details .title p.current-img{
+  font-weight: 500;
+  
+}
+
+.details .icon{
+  color: #007bff;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.preview-box .image-box{
+  margin: 5px 20px 20px 20px;
+  display: flex;
+  height: 85%;
+  position: relative;
+  
+}
+
+.description {
+  margin: 10px;
+  padding: 10px;
+  max-height: 200px; /* Limit maximum height */
+  padding: 10px; /* Add padding */
+
+}
+
+.image-box .slide{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  height: 50px;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  
+}
+
+.slide.prev{
+  left: 0px;
+}
+
+.slide.next{
+  right: 0px;
+}
+
+.image-box img{
+  width: 50%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.image-box .des{
+    margin-left: 25px;
+}
+
+.shadow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.45);
+}
+
+
+@media(max-width: 1000px){
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+
+@media(max-width: 600px){
+  .gallery .image{
+    width: 100%;
+    padding: 4px;
+  }
+}
+
+

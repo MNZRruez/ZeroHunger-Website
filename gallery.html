@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="./Style/gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-name">
+      <h2>
+        <div class="topic">
+          IMAGE GALLERY
+          <div class="color-button">
+            <button id="1" onclick="color(this)" class="color1"></button>
+            <button id="2" onclick="color(this)" class="color2"></button>
+            <button id="3" onclick="color(this)" class="color3"></button>
+            <button id="4" onclick="color(this)" class="color4"></button>
+          </div>
+        </div>
+      </h2>
+    </div>
+    <div class="font-button">
+      <button id="font1" onclick="changeFontStyle('Arial')" class="font1">Font 1</button>
+      <button id="font2" onclick="changeFontStyle('Verdana')" class="font2">Font 2</button>
+      <button id="font3" onclick="changeFontStyle('Tahoma')" class="font3">Font 3</button>
+      <button id="font4" onclick="changeFontStyle('Georgia')" class="font4">Font 4</button>
+    </div>
+    <div class="gallery">
+      <div class="image" data-description="A photograph capturing the stark reality of food insecurity in a developing country, showing individuals or families struggling to access adequate and nutritious food due to poverty and lack of resources."><span><img src="images/img1.jpg" alt=""></span></div>
+      <div class="image" data-description="An image depicting a community food distribution event where volunteers are distributing food supplies to people in need, showcasing collective efforts to address hunger at a local level."><span><img src="images/img2.jpg" alt=""></span></div>
+      <div class="image" data-description="A photograph showcasing a school meal program where children receive nutritious meals during their school day, highlighting the importance of such programs in improving nutrition and educational outcomes."><span><img src="images/img3.webp" alt=""></span></div>
+      <div class="image" data-description="An image showcasing sustainable agriculture practices such as organic farming, agroforestry, or permaculture, emphasizing the role of sustainable farming in achieving food security and reducing hunger."><span><img src="images/img4.jpeg" alt=""></span></div>
+      <div class="image" data-description="A visual representation of efforts to reduce food waste, such as composting, food recycling, or initiatives to redistribute surplus food to those in need, demonstrating strategies to address hunger while promoting sustainability."><span><img src="images/img5.webp" alt=""></span></div>
+      <div class="image" data-description="An image capturing a nutrition education workshop or awareness program, demonstrating efforts to educate communities about the importance of balanced diets, healthy eating habits, and nutritional knowledge to combat hunger and malnutrition"><span><img src="images/img6.jpg" alt=""></span></div>
+    </div>
+  </div>
+  <div class="preview-box">
+    <div class="details">
+      <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span>
+      <span class="icon fas fa-times"></span>
+    </div>
+    <div class="image-box">
+      <img src="" alt="">
+      <div class="description"></div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+
+
+  <script>
+    const gallery = document.querySelectorAll(".image"),
+          previewBox = document.querySelector(".preview-box"),
+          previewImg = previewBox.querySelector("img"),
+          closeIcon = previewBox.querySelector(".icon"),
+          currentImg = previewBox.querySelector(".current-img"),
+          totalImg = previewBox.querySelector(".total-img"),
+          shadow = document.querySelector(".shadow"),
+          description = previewBox.querySelector(".description");
+
+    window.onload = () => {
+      for (let i = 0; i < gallery.length; i++) {
+        totalImg.textContent = gallery.length;
+        let newIndex = i;
+        let clickedImgIndex;
+
+        gallery[i].onclick = () => {
+          clickedImgIndex = i;
+
+          function preview() {
+            currentImg.textContent = newIndex + 1;
+            let imageURL = gallery[newIndex].querySelector("img").src;
+            let desc = gallery[newIndex].getAttribute("data-description");
+            previewImg.src = imageURL;
+            description.textContent = desc;
+          }
+          preview();
+
+          document.querySelector("body").style.overflow = "hidden";
+          previewBox.classList.add("show");
+          shadow.style.display = "block";
+          closeIcon.onclick = () => {
+            newIndex = clickedImgIndex;
+            previewBox.classList.remove("show");
+            shadow.style.display = "none";
+            document.querySelector("body").style.overflow = "scroll";
+          }
+
+          // Get the background color of the body
+          const bodyBgColor = getComputedStyle(document.body).backgroundColor;
+          // Set the background color of the preview box
+          previewBox.style.backgroundColor = bodyBgColor;
+        }
+      }
+    }
+
+    function color(z) {
+      var a = getComputedStyle(z);
+      var b = a.backgroundColor;
+      document.body.style.backgroundColor = b;
+    }
+
+    function changeFontStyle(fontFamily) {
+      document.body.style.fontFamily = fontFamily;
+      // Update font style for description box
+      description.style.fontFamily = fontFamily;
+    }
+  </script>
+</body>
+</html>

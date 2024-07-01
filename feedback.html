@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Style/feedback.css">
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="icon" href="./Images/zero HUNGER LOGO.jpg" type="image/x-icon">
+    <title>Zero Hunger</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <a href="shop.html"><li class="nav-link nav-link-2">Shop<div class="nav-line nav-dot"></div></li></a>
+                <a href="gallery.html"><li class="nav-link nav-link-3">Gallery<div class="nav-line nav-dot"></div></li></a>
+                <a href="team.html"><li class="nav-link nav-link-4">Team<div class="nav-line nav-dot"></div></li></a>
+            </ul>    
+            <div class="logo-con">
+                <a href="home.html">
+                    <div><img src="./Images/Logo2w.png" alt="Zero Hunger Logo"></div>
+                </a>
+            </div>
+            <ul class="nav-links">    
+                <a href="sitemap.html"><li class="nav-link nav-link-5">Sitemap<div class="nav-line nav-dot"></div></li></a>
+                <a href="feedback.html"><li class="nav-link nav-link-6 active" >Feedback<div class="nav-line nav-dot"></div></li></a>
+                <a href="userprofile.html"><li class="nav-link nav-link-7">User Profile<div class="nav-line nav-dot"></div></li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="feedback">
+        
+        <form action="mailto:mnzr.alee@gmail.com" method="post" onsubmit="submitFormAndReload()">
+            <div class="feed-form">
+                <h2>Feedback Form</h2>
+                <div class="part name">
+                    <label for="name">Enter your name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter name here" class="required"><br>
+                    <p class="error" id="name-error">*Oops! Looks like you forgot to fill out this field.</p>
+
+                </div>
+                <div class="part email">   
+                    <label for="email">Enter your Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter email here" class="required"><br>
+                    <p class="error" id="mail-error">*fill out this field with a valid email address.</p>
+
+                </div>
+                <div class="part radio">
+                    <p class="question">Was this your first time visiting?</p>
+                    <input type="radio" name="first" id="first-yes" value="Yes">
+                    <label for="first-yes">Yes</label>
+                    <input type="radio" name="first" id="first-no" value="No">
+                    <label for="first-no">No</label><br>
+                </div>
+                <div class="part radio">
+                    <p class="question">Was this website informative and easy to navigate through?</p>
+                    <input type="radio" name="easy" id="easy-yes" value="Yes">
+                    <label for="easy-yes">Yes</label>
+                    <input type="radio" name="easy" id="easy-no" value="No">
+                    <label for="easy-no">No</label><br>
+                </div>
+                <div class="part">
+                    <p class="question">Suggest any improvements for the future</p>
+                    <textarea name="improve" id="improv" cols="40" rows="3" placeholder="Add your message here..." class="required"></textarea><br>
+                    <p class="error" id="improv-error">*Hey there! Don't forget to fill out this field.</p>
+
+                </div>
+
+                <div class="part">
+                    <p class="question">How satisfied are you with Our services? <br>Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
+                    <div class="rating">
+                        <div class="sub-rating">
+                            <label for="rating-1">1</label><br>
+                            <input type="radio" name="rating" id="rating-1" value="1">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-2">2</label><br>
+                            <input type="radio" name="rating" id="rating-2" value="2">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-3">3</label><br>
+                            <input type="radio" name="rating" id="rating-3" value="3">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-4">4</label><br>
+                            <input type="radio" name="rating" id="rating-4" value="4">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-5">5</label><br>
+                            <input type="radio" name="rating" id="rating-5" value="5">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-6">6</label><br>
+                            <input type="radio" name="rating" id="rating-6" value="6">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-7">7</label><br>
+                            <input type="radio" name="rating" id="rating-7" value="7">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-8">8</label><br>
+                            <input type="radio" name="rating" id="rating-8" value="8">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-9">9</label><br>
+                            <input type="radio" name="rating" id="rating-9" value="9">
+                        </div>
+                        
+                        <div class="sub-rating">
+                            <label for="rating-10">10</label><br>
+                            <input type="radio" name="rating" id="rating-10" value="10">
+                        </div>
+                    </div>
+                </div> 
+                <div class="part radio">
+                    <p class="question">Would you recommend our services?</p>
+                    <input type="radio" name="recom" id="recom-yes" value="Yes">
+                    <label for="recom-yes">Yes</label>
+                    <input type="radio" name="recom" id="recom-no" value="No">
+                    <label for="recom-no">No</label><br>
+                </div>
+                <div class="part">
+                    <p class="question">Would you like to receive updates about the website and any offers?</p>
+                    <select name="updates" id="updates" class="required">
+                        <option value="" disabled selected>- select -</option>
+                        <option value="yes" class="option">Yes - via Email</option>
+                        <option value="no" class="option">No</option>
+                    </select>
+                    <p class="error" id="updates-error">*Oops! You forgot to make a selection. Please choose an option.</p>
+
+                </div>
+                <div class="part">
+                    <p class="question">Do you have any questions or requests?</p>
+                    <textarea name="requests" id="requests" cols="40" rows="5" placeholder="Add your message here..."></textarea><br>
+                </div>
+                <!-- <button type="submit">Submit</button> -->
+                <button type="button" id="submit-btn" onclick="submitForm()">Submit</button>
+            </div>
+            <!-- Preview Section -->
+            
+            <div id="preview" class="preview active-none">
+                <h2>Preview</h2>
+                <p>Name: <span id="preview-name"></span></p>
+                <p>Email: <span id="preview-email"></span></p>
+                <p>First time visiting? <span id="preview-ftime"></span></p>
+                <p>Was this website easy to navigate? <span id="preview-easy"></span></p>
+                <p>Suggest any improvements? <span id="preview-improv"></span></p>
+                <p>How satisified are you? <span id="preview-satis"></span></p>
+                <p>Would you recommend our services? <span id="preview-recom"></span></p>
+                <p>Would you like to receive  updates? <span id="preview-updates"></span></p>
+                <p>Do you have any questions or requests? <span id="preview-req"></span></p>
+                <button type="button" id="edit-btn" onclick="editPreview()">Edit</button>
+                
+                <button type="submit" id="confirm-btn" onclick="confirm()">Confirm</button>
+                
+            </div>
+        
+
+        </form>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div><a href="editor-manazir.html">Page Editor</a></div>
+        <div class="line"></div>
+        <div><p>Manazir Ali</p></div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="./Script/feedback.js"></script>
+</body>
+</html>

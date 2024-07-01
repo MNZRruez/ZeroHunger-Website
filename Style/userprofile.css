@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+    
+
+body{
+    background: url(../Images/feedback_bg2.jpg);
+    height: fit-content;
+    justify-items: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+    
+h1{
+    text-align: center;
+    color: #dda73a;
+    
+    margin-top: 80px;
+    border:10px black;
+    
+    border-radius: 1px;
+
+}
+    
+.container{
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+}
+
+section {
+    width: 50%;
+    height: fit-content; 
+    border-color: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.5);
+    background-color: #000000e3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    
+}
+
+h1{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: 0;
+}
+   
+
+.userdetails {
+    width: 80%;
+    color:  black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+@media(max-width:576px){
+    .user-details {
+        width: calc(100% - 50px);
+        margin: auto;
+    }
+}
+
+.startbutton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.startbutton button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-bottom: 3px solid #dda73a;
+
+    background-color:#dfdfdf20;
+    cursor: pointer;
+    color: rgba(245, 245, 245, 0.892);
+   
+}
+.startbutton button:hover{
+    background-color:#dda73a;
+}
+
+.questionnumber{
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.nextaskipbtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.nsbtn{
+    display: flex;
+}
+
+.nsbtn button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-bottom: 3px solid #dda73a;
+
+    background-color:#dfdfdf20;
+    cursor: pointer;
+    color: rgba(245, 245, 245, 0.892);
+    margin: 0 5px;
+}
+.nsbtn button:hover{
+
+    background-color:#dda73a;
+
+}
+
+.progress{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 14px
+   
+    
+}
+#progress{
+    color:  rgba(245, 245, 245, 0.892);
+}
+
+.progresscontainer {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+.progresscontainer:hover{
+    transform: scale(1.1);
+}
+
+.progressbar {
+    width: 10%;
+    height: 100%;
+    background-color:#dda73a;
+    border-radius: 10px;
+}
+
+.output,
+.finaloutput{
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    /* background-color: red; */
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgb(82, 82, 82);
+    background-color: rgb(223, 223, 223);
+    font-family: sans-serif;
+    
+}
+.output:hover{
+    transform: scale(1.05);
+}
+
+.output ul li,
+.finaloutput ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.output ul li:first-child,
+.final-output ul li:first-child{
+    margin-top: 0;
+
+}
+
+.finaloutput{
+    display: none;
+}
+
+.finaloutput ul li div{
+    width: 100%;
+    height: 4px;
+    background-color:#dda73a;
+    border-radius: 5px;
+}

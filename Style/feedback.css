@@ -1,0 +1,124 @@
+
+
+body{
+    text-align: center;
+    background:  url(../Images/feedback_bg2.jpg);
+    padding-top: 8vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback{
+    background-color: #000000e3;
+    width: 60%;
+    height: fit-content;
+    margin: 5vh auto;
+    padding: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.feedback h2{
+    font-size: 35px;
+    padding-bottom: 30px;
+    color: #dda73a;
+}
+
+.name input, .email input{
+    height: 30px;
+    margin: 5px;
+
+}
+
+input, textarea, select, button{
+    border: 1px solid black;
+    border-bottom: 2px solid #dda73a;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #dfdfdf20;
+    color: rgba(245, 245, 245, 0.892);
+}
+
+.radio input[type="radio"]{
+    margin-left: 20px;
+    width: 25px;
+}
+.radio{
+    margin-right: 40px;
+
+}
+
+
+.part{
+    padding: 20px;
+}
+
+.question{
+    padding: 10px;
+}
+
+select{
+    padding: 5px;
+    text-align: center;
+}
+
+select .option{
+    background-color: #dfdfdf20;
+    color: black;
+}
+
+button{
+    width: 150px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button:hover{
+    background-color: #dda73a;
+
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+    font-weight: 200;
+    display: none;
+}
+
+.active-block{
+    display: block;
+}
+.active-none{
+    display: none;
+}
+
+
+
+.preview p{
+    margin: 10px;
+    font-weight: 500;
+    text-align: left;
+}
+.preview span{
+    margin: 10px;
+    font-weight: 300;
+    color: #dda73a;
+}
+
+.preview button{
+    margin-top: 30px;
+}

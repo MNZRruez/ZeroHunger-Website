@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Page</title>
+<style>
+
+  
+/* NAVIGATION BAR */
+
+nav{
+    font-family:  "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    font-style: normal;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header{
+    position: fixed;
+    min-height: 50px;
+    max-height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+}
+
+.logo_con{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_con a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+img{
+    height: 50px;
+    padding: 8px 1px 4px 1px; 
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0%;
+    padding: 0 40px;
+    width: 40%;
+}
+
+.nav_links li{
+    list-style-type: none;
+    width: 150px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_links a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    padding-top: 3px;
+}
+
+.nav_line{
+    display: none;
+    background-color: #05ABAD;
+    width: 100%;
+    height: 2.5px;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.nav_link{
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid #05aaad00;
+}
+
+.nav_link:hover{
+    border-bottom: 3px solid #DDA83A;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.active{
+    border-bottom: 3px solid #DDA83A;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.115);
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    background-color: #e9e5e3;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 7vh;
+    font-size: 15px;
+    color: #e9e5e3;
+    background-color: #000000;
+    margin: 0;
+    padding: 1px;
+    gap: 150px;
+    font-weight: 200;
+    z-index: 10;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .line{
+    height: 60%;
+    width: 1px;
+    background-color: #e9e5e3d2;
+    border-radius: 50px;
+}
+
+
+
+
+@keyframes line {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 100%;
+        }
+}
+
+
+h1{
+  text-align: center;
+  scale: 1.8;
+  font-family: futura;
+      
+      
+     color: #f0f2f4;
+}
+h1::after {
+  content: ''; /* Empty content for pseudo-element */
+  width: 100%; /* Full width of the parent element */
+  height: 3px; /* Height of the underline */
+  background-color: blue; /* Color of the underline */
+  bottom: -5px; /* Adjust this value to control the distance between text and underline */
+  left: 0; /* Align to the left */
+  position: absolute;
+  -webkit-animation:colorchange 20s infinite alternate;
+}
+.a{
+  color: #f0f2f4;
+  text-align: center;
+}
+
+   
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 10vh;
+    background: linear-gradient(-45deg, hwb(188 2% 72%), #e73c7e, #23a6d5, #23d5ab);
+	  background-size: 400% 400%;
+	  animation: gradient 15s ease infinite;
+	  height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+  
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    height: 90vh;
+  }
+  
+  .member {
+    margin: 20px;
+    position: relative;
+    aspect-ratio: 3/2;
+    
+  }
+  
+  .member img {
+    width: 200px;
+    height: 300px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    object-fit: contain;
+    margin-top: 100px;
+    filter: drop-shadow(1px 1px 10px rgb(14, 14, 14));
+   
+  }
+  
+  .member .details {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    bottom: -100px;
+    left: 50%;
+    flex:1;
+    transform: translateX(-50%);
+    transition: bottom 2s all ease;
+    width: 250px;
+    box-shadow: 1px 1px 20px rgb(240, 240, 233);
+  }
+  
+  .member:hover img {
+    border-color: #f0f2f4;
+   
+    filter:blur(2px);
+    scale: 1.1;
+  }
+  
+  .member:hover .details {
+    display: block;
+    bottom: 0;
+    color: blueviolet;
+   
+  }
+  *,:before,:after{
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+h3{
+  text-align: center;
+}
+
+.social-container {
+	margin:0 auto;
+  padding: 40px 0;
+	width:200px;
+  height:100%;
+  
+  justify-content: center;
+  
+
+}
+
+/* Add this ID to a section or something you want to change the background-color */
+
+
+/* Button Styles */
+.social-container a {
+display: block;
+width:200px;
+line-height: 40px;
+border: 1px solid rgba(0,0,0,.1);
+color: rgba(0,0,0,.6);
+margin:20px 0;
+text-decoration: none;
+text-align:center;
+justify-content: center;
+}
+
+.social-container a i {
+margin-right: 10px;   
+}
+
+.social-container a:hover  {
+border: 1px solid rgba(255,255,255,.3);
+color: rgba(255,255,255,.6);
+}
+
+  
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+        <ul class="nav_links">
+            <a href="shop.html"><li class="nav_link nav_link_2">Shop<div class="nav_line nav_dot"></div></li></a>
+            <a href="gallery.html"><li class="nav_link nav_link_3">Gallery<div class="nav_line nav_dot"></div></li></a>
+            <a href="team.html"><li class="nav_link nav_link_4 active">Team<div class="nav_line nav_dot"></div></li></a>
+        </ul>    
+        <div class="logo_con">
+            <a href="home.html">
+                <div><img src="./Images/Logo2w.png" alt="Zero Hunger Logo"></div>
+            </a>
+        </div>
+        <ul class="nav_links">    
+            <a href="sitemap.html"><li class="nav_link nav_link_5">Sitemap<div class="nav_line nav_dot"></div></li></a>
+            <a href="feedback.html"><li class="nav_link nav_link_6">Feedback<div class="nav_line nav_dot"></div></li></a>
+            <a href="userprofile.html"><li class="nav_link nav_link_7 ">User Profile<div class="nav_line nav_dot"></div></li></a>
+        </ul>
+    </nav>
+</header> 
+
+    <h1>Meet Our Team</h1>
+<div class="team">
+  <div class="member">
+    <img src="./Images/Picsart_24-03-30_14-36-51-343.jpg" alt="Team Member 1" />
+    <p class="a">Ibrahim</p>
+    <div class="details">
+      <h3>Ibrahim</h3>
+      <p>Role: Student 1</p>
+      <p>Tasks: Splash screen|Shop</p>
+    </div>
+  </div>
+  <div class="member">
+    <img src="./Images/argash.jpg" alt="Team Member 2" />
+    <p class="a">Manazir Ali</p>
+    <div class="details">
+      <h3>Manazir Ali</h3>
+      <p>Role: Student 2</p>
+      <p>Tasks: Home Page + template + nav|Feedback</p>
+    </div>
+  </div>
+  <div class="member">
+    <img src="./Images/Picsart_24-03-30_14-39-13-802.jpg" alt="Team Member 3" />
+    <p class="a">Gayathra</p>
+    <div class="details">
+      <h3>Gayathra Chanith</h3>
+      <p>Role: Student 3</p>
+      <p>Tasks: User Profile|Team</p>
+    </div>
+  </div>
+  <div class="member">
+    <img src="./Images/35332c3e-d152-4978-bb48-2478a2c923f9.jpg" alt="Team Member 4" />
+    <p class="a">Kushan</p>
+    <div class="details">
+      <h3>Kushan Sameera</h3>
+      <p>Role:Student 4</p>
+      <p>Tasks: Gallery|Sitemap</p>
+    </div>
+  </div>
+  <div class="social-container">
+    <h3>Follow us on</h3>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i>Twitter</a>
+    
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook</a>
+    
+    <a href="#" class="googleplus"><i class="fa fa-google-plus"></i>Google +</a>
+    
+    <a href="#" class="pinterest"><i class="fa fa-pinterest"></i>Pinterest</a>
+    
+    <a href="#" class="LinkedIn"><i class="fa fa-LinkedIn"></i>LinkedIn</a>
+    
+    <a href="#" class="instagram"><i class="fa fa-instagram"></i>Instagram</a>
+    </div>
+
+</div>
+
+    
+    <!-- FOOTER -->
+    <footer>
+      <div><a href="editor-chanith.html">Page Editor</a></div>
+      <div class="line"></div>
+      <div><p>Chanith</p></div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

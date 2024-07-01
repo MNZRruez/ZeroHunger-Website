@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Style/page-editor.css">
+
+    <link rel="icon" href="./Images/zero HUNGER LOGO.jpg" type="image/x-icon">
+    <title>Zero Hunger</title>
+</head>
+<body>
+    <h2 class="editor">.Editors Page</h2>
+    <main>
+        <section class="left-content">
+            
+            
+            <p id="con0">
+                Name: <span>Manazir Ali</span> <br>
+                Role: <span>Student 2</span> <br>
+                Student ID: <span>W2051634 | 20230327</span>
+            </p>
+            <h2>What I Worked On.</h2>
+            <div class="heads">
+                <div class="con" id="home" onclick="display('home')">
+                    <p class="" ">Home Page </p>
+                </div>
+                <div class="con" id="nav" onclick="display('nav')">
+                    <p class="">Nav & logo & Template</p>
+                </div>
+                <div class="con" id="feedback" onclick="display('feed')">
+                    <p class="">Feedback Form </p>
+                </div>
+                <div class="con" id="content" onclick="display('cont')">
+                    <p class="">Content Page </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="right-content ">
+            <div  class="right-con">
+                <div class="content-section">
+                    <p id="intro">
+                        To Discover More <br>simply select a section!
+                    </p>
+                </div>
+            </div>
+            <div id="home-con" class=" right-con active-none">
+                <div class="content-section">
+                    <p>
+                        Designed and developed the complete Home Page for the website, incorporating multiple sections and divisions. Background images were added using CSS, and styling was applied to ensure a simple and elegant design. 
+                        Elaborates on the UN Sustainable Development Goal Zero Hunger conveying its purpose and commitment to sustainability. Also Features a gallery linking to various content of the website.
+                    </p>
+                    <a href="home.html">Navigate to this page</a>
+                </div>
+            </div>
+            <div id="nav-con" class="  right-con active-none">
+                <div class="content-section">
+                    <p>
+                        Designed and developed a template featuring header, footer and  general page styling. This template is used by all team members to ensure a consistent look and feel of the website. The website Header includes the website logo which was also design by me and Navigation bar which facilitates seamless navigation to other sections of the website.
+                        The navigation bar is designed using CSS indicating the active page being browsed by the user with a bottom border effect for the current active page and a hover effect when the user hovers over a nav link. The Footer includes a link to the editors page and editor name.
+                        
+                    </p>
+                    <a href="template.html">Navigate to this page</a>
+
+                </div>
+            </div>
+            <div id="feedback-con" class="  right-con active-none">
+                <div class="content-section">
+                    <p>
+                        Designed and developed the Feedback form page featuring a clean and intuitive interface, making it easy for users to navigate and submit their comments that includes,
+                        Input fields, Validation, Error handling, Preview, Edit and Confirmation elements.
+                        Provides clear error messages and indication if users attempt to submit the form with missing or invalid
+                        information. Allow users to preview the feedback form and edit it before submitting it.
+                        Upon successful submission, display a confirmation message to acknowledge receipt of the comment and set up to email the contents of the form to an email address.
+                        
+                    </p>
+                    <a href="feedback.html">Navigate to this page</a>
+                </div>
+            </div>
+            <div id="content-con" class="  right-con active-none">
+                <div class="content-section">
+                    <p>
+                        Designed and developed a content page related to Zero Hunger, How We Will Achieve Zero Hunger, Yes, We Will End Hunger, What We Have Done and Join Us, Donate, Shop
+                        Everything Helps sections. Also include links at the top of each section content to various
+                        sections within the content page for easy navigation. 
+                    </p>
+                    <a href="content.html">Navigate to this page</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./Script/page-editor.js"></script>
+</body>
+
+</html>
